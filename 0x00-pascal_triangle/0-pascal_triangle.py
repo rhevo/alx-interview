@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-0. Pascal's Triangle
+Pascal's Triangle
 """
 
 def pascal_triangle(n):
@@ -24,10 +24,10 @@ def pascal_triangle(n):
             res.append(level)
     return res
 
-# Example Usage:
+
+# Example Usage
 if __name__ == "__main__":
     n = 5
     triangle = pascal_triangle(n)
     for row in triangle:
         print(row)
-
