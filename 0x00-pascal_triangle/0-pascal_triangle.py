@@ -3,9 +3,7 @@
 0. Pascal's Triangle
 """
 
-from typing import List
-
-def pascal_triangle(n: int) -> List[List[int]]:
+def pascal_triangle(n):
     """
     Generate Pascal's triangle of n levels.
 
@@ -19,9 +17,17 @@ def pascal_triangle(n: int) -> List[List[int]]:
     if n > 0:
         for i in range(1, n + 1):
             level = []
-            C = 1
+            C = 1  # Initialize the first value in the row
             for j in range(1, i + 1):
                 level.append(C)
-                C = C * (i - j) // j
+                C = C * (i - j) // j  # Update C to the next binomial coefficient
             res.append(level)
     return res
+
+# Example Usage:
+if __name__ == "__main__":
+    n = 5
+    triangle = pascal_triangle(n)
+    for row in triangle:
+        print(row)
+
