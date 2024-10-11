@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
+ """Determine if all boxes can be opened."""
 def canUnlockAll(boxes):
-    """Determine if all boxes can be opened."""
     n = len(boxes)
     unlocked = {0}  # Start with the first box unlocked
     keys = boxes[0]  # Keys from the first box
